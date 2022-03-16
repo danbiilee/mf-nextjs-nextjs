@@ -10,7 +10,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>Hello! This content is hosted locally.</main>
+      <main className={styles.main}>
+        <button>로그인</button>
+        <button>회원가입</button>
+      </main>
     </div>
   );
 }
