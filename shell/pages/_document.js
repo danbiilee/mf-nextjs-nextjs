@@ -8,8 +8,8 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <script src="http://localhost:3001/_next/static/chunks/remoteEntry.js" />
-        <script src="http://localhost:3002/_next/static/chunks/remoteEntry.js" />
+        <script src="http://localhost:3001/_next/static/chunks/app1RemoteEntry.js" />
+        <script src="http://localhost:3002/_next/static/chunks/app2RemoteEntry.js" />
         <Head />
         <body>
           <Main />

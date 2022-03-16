@@ -9,7 +9,7 @@ const nextConfig = {
 
 const mfConfig = {
   name: 'app2',
-  filename: 'static/chunks/remoteEntry.js',
+  filename: 'static/chunks/app2RemoteEntry.js',
   exposes: {
     './luigi': './components/luigi',
   },
