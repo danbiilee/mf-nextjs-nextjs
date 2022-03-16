@@ -2,6 +2,7 @@ const { withFederatedSidecar } = require('@module-federation/nextjs-mf');
 
 const nextConfig = {
   future: { webpack5: true },
+  reactStrictMode: true,
   images: {
     domains: ['upload.wikimedia.org'],
   },
