@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import styles from './index.module.scss';
 
 export default function Home() {
@@ -9,9 +10,12 @@ export default function Home() {
         <meta name="description" content="Demo for Microfrontends using Module Federation" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <button>로그인</button>
-      <button>회원가입</button>
+      <Link href="/login">
+        <a>로그인</a>
+      </Link>
+      <Link href="/signup">
+        <a>회원가입</a>
+      </Link>
     </main>
   );
 }
