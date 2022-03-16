@@ -1,6 +1,7 @@
 /**
  * @type {import('next').NextConfig}
  */
+const path = require('path');
 
 const mfConfig = {
   remoteType: 'var',
@@ -19,13 +20,16 @@ const mfConfig = {
 };
 
 const nextConfig = {
+  webpack(config, options) {
+    config.plugins.push(new options.webpack.container.ModuleFederationPlugin(mfConfig));
+    return config;
+  },
   reactStrictMode: true,
   images: {
     domains: ['upload.wikimedia.org'],
   },
-  webpack(config, options) {
-    config.plugins.push(new options.webpack.container.ModuleFederationPlugin(mfConfig));
-    return config;
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
 };
 
