@@ -1,0 +1,10 @@
+{
+  "css.customData": [".vscode/css_custom_data.json"],
+  "workbench.colorCustomizations": {
+    "titleBar.activeBackground": "#e1306c",
+    "titleBar.inactiveBackground": "#e1306c",
+    "titleBar.activeForeground": "#000",
+    "statusBar.background": "#e1306c",
+    "statusBar.foreground": "#000"
+  }
+}
