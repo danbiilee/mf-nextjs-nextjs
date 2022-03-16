@@ -11,7 +11,7 @@ const Luigi = () => {
         height={413}
       /> */}
       <h1 className={styles.title}>G'day! I'm Luigi, a microfrontend.</h1>
-      <span>I'm hosted at localhost:3001</span>
+      <span>I'm hosted at localhost:3002</span>
     </main>
   );
 };
