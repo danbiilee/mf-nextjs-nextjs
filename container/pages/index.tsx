@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from './index.module.scss';
+import Button from '../../shared/components/Button';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Link href="/signup">
         <a>회원가입</a>
       </Link>
+      <Button />
     </main>
   );
 }
