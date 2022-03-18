@@ -1,19 +1,16 @@
 {
+  "name": "mf-nextjs-nextjs",
   "private": true,
   "workspaces": [
-    "container",
-    "app1",
-    "app2"
+    "*"
   ],
   "scripts": {
-    "dev": "lerna run --parallel dev",
-    "start": "concurrently \"cd app1; yarn dev \" \"cd app2; yarn dev\" \"cd shell; yarn dev \"",
-    "build": "concurrently \"cd app1; yarn build \" \"cd app2; yarn build\" \"cd shell; yarn build \"",
-    "serve": "concurrently \"cd app1; yarn start \" \"cd app2; yarn start\" \"cd shell; yarn start \"",
-    "postinstall": "concurrently \"cd app1; yarn\" \"cd app2; yarn\" \"cd shell; yarn\""
+    "dev": "lerna run --parallel dev"
   },
   "dependencies": {
-    "concurrently": "^5.2.0",
+    "@mf-shared": "file:shared"
+  },
+  "devDependencies": {
     "lerna": "^4.0.0"
   }
 }

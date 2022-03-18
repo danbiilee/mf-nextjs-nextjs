@@ -1,9 +1,11 @@
 import Image from 'next/image';
 import styles from '../styles/Mario.module.css';
+// import Button from '@mf-shared/components/Button';
 
 const Mario = () => {
   return (
     <main className={styles.main}>
+      {/* <Button /> */}
       {/* <Image
         src="https://upload.wikimedia.org/wikipedia/en/a/a9/MarioNSMBUDeluxe.png"
         alt="Mario"

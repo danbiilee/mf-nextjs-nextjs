@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from './index.module.scss';
-import Button from '../../shared/components/Button';
+// import { Button } from '@mf-shared/dist/main';
 
 export default function Home() {
   return (
@@ -11,13 +11,13 @@ export default function Home() {
         <meta name="description" content="Demo for Microfrontends using Module Federation" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <Button /> */}
       <Link href="/login">
-        <a>로그인</a>
+        <a>app1:3001</a>
       </Link>
       <Link href="/signup">
-        <a>회원가입</a>
+        <a>app2:3002</a>
       </Link>
-      <Button />
     </main>
   );
 }

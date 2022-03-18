@@ -3,7 +3,7 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import webpack, { Configuration as WebpackConfiguration } from 'webpack';
 // import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
 // import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
 interface Configuration extends WebpackConfiguration {
@@ -14,9 +14,7 @@ const isDevelopment = process.env['NODE_ENV'] !== 'production';
 
 const config: Configuration = {
   name: 'setup',
-  entry: {
-    app: './src/index.tsx',
-  },
+  entry: './index.ts',
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'hidden-source-map' : 'eval',
   devServer: {
@@ -65,15 +63,16 @@ const config: Configuration = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      template: './public/index.html',
-    }),
+    // new HtmlWebpackPlugin({
+    //   filename: 'index.html',
+    //   template: './public/index.html',
+    // }),
     new webpack.EnvironmentPlugin({ NODE_ENV: isDevelopment ? 'development' : 'production' }),
   ],
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
+    filename: '[name].js',
+    // filename: isDevelopment ? '[name].js' : '[name].[contenthash].js',
     assetModuleFilename: isDevelopment ? 'assets/[name][ext]' : 'assets/[name].[contenthash][ext]',
     clean: true,
   },

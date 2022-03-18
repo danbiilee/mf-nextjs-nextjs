@@ -21,7 +21,33 @@ const mfConfig = {
 
 const nextConfig = {
   webpack(config, options) {
+    // mf
     config.plugins.push(new options.webpack.container.ModuleFederationPlugin(mfConfig));
+
+    // babel loader
+    config.module.rules.push({
+      test: /\.tsx?$/,
+      loader: 'babel-loader',
+      options: {
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: { browsers: ['last 2 chrome versions'] },
+              debug: isDevelopment,
+            },
+          ],
+          '@babel/preset-react',
+          '@babel/preset-typescript',
+        ],
+        env: {
+          development: {
+            plugins: [require.resolve('react-refresh/babel')],
+          },
+        },
+      },
+      exclude: path.join(__dirname, 'node_modules'),
+    });
     return config;
   },
   reactStrictMode: true,
