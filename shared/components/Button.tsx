@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Button = () => {
-  return <button>shared button - jsx</button>;
+  const [count, setCount] = useState(0);
+  return <button onClick={() => setCount(prev => prev + 1)}>shared button {count}</button>;
 };
 
 // const Button = () => {

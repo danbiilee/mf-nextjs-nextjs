@@ -7,9 +7,6 @@
   "scripts": {
     "dev": "lerna run --parallel dev"
   },
-  "dependencies": {
-    "@mf-shared": "file:shared"
-  },
   "devDependencies": {
     "lerna": "^4.0.0"
   }

@@ -34,17 +34,18 @@ const nextConfig = {
             '@babel/preset-env',
             {
               targets: { browsers: ['last 2 chrome versions'] },
-              debug: isDevelopment,
+              debug: true,
+              // debug: isDevelopment,
             },
           ],
           '@babel/preset-react',
           '@babel/preset-typescript',
         ],
-        env: {
-          development: {
-            plugins: [require.resolve('react-refresh/babel')],
-          },
-        },
+        // env: {
+        //   development: {
+        //     plugins: [require.resolve('react-refresh/babel')],
+        //   },
+        // },
       },
       exclude: path.join(__dirname, 'node_modules'),
     });
